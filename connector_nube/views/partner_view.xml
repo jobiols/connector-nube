@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  connector_tienda_nube for Odoo
+  Copyright (C) 2012 Akretion Benoît GUILLOT <benoit.guillot@akretion.com>
+  The licence is in the file __openerp__.py
+-->
+
+<openerp>
+    <data>
+
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="connector.view_partner_connector_form"/>
+            <field name="arch" type="xml">
+                <page name="connector" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </page>
+                <page name="connector" position="inside">
+                    <group string="TiendaNube Bindings">
+                        <field name="tienda_nube_bind_ids"
+                               nolabel="1"/>
+                    </group>
+                </page>
+            </field>
+        </record>
+
+        <record id="view_tienda_nube_res_partner_form" model="ir.ui.view">
+            <field name="name">tienda_nube.res.partner.form</field>
+            <field name="model">tienda_nube.res.partner</field>
+            <field name="arch" type="xml">
+                <form string="TiendaNube Partner" version="7.0">
+                    <group>
+                        <field name="shop_group_id"/>
+                        <field name="backend_id"/>
+                        <field name="tienda_nube_id"/>
+                        <field name="date_add"/>
+                        <field name="date_upd"/>
+                        <field name="group_ids"/>
+                        <field name="newsletter"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tienda_nube_res_partner_tree" model="ir.ui.view">
+            <field name="name">tienda_nube.res.partner.tree</field>
+            <field name="model">tienda_nube.res.partner</field>
+            <field name="arch" type="xml">
+                <tree string="TiendaNube Partner" version="7.0">
+                    <field name="backend_id"/>
+                    <field name="shop_group_id"/>
+                    <button name="resync"
+                            type="object"
+                            string="Resync"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_tienda_nube_address_form" model="ir.ui.view">
+            <field name="name">tienda_nube.address.form</field>
+            <field name="model">tienda_nube.address</field>
+            <field name="arch" type="xml">
+                <form string="TiendaNube Address" version="7.0">
+                    <group>
+                        <field name="shop_group_id"/>
+                        <field name="backend_id"/>
+                        <field name="tienda_nube_partner_id"/>
+                        <field name="tienda_nube_id"/>
+                        <field name="date_add"/>
+                        <field name="date_upd"/>
+                        <field name="vat_number"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tienda_nube_address_tree" model="ir.ui.view">
+            <field name="name">tienda_nube.address.tree</field>
+            <field name="model">tienda_nube.address</field>
+            <field name="arch" type="xml">
+                <tree string="TiendaNube Address" version="7.0">
+                    <field name="backend_id"/>
+                    <field name="shop_group_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_partner_category_form" model="ir.ui.view">
+            <field name="name">res.partner.category.form</field>
+            <field name="model">res.partner.category</field>
+            <field name="inherit_id" ref="base.view_partner_category_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group" position="after">
+                    <group string="TiendaNube Binding">
+                        <field name="tienda_nube_bind_ids" nolabel="1">
+                            <form string="TiendaNube">
+                                <field name="backend_id"/>
+                                <field name="tienda_nube_id"/>
+                            </form>
+                            <tree string="TiendaNube">
+                                <field name="backend_id"/>
+                            </tree>
+                        </field>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
