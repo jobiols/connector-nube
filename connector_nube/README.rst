@@ -6,6 +6,8 @@
 Odoo TiendaNube Connector
 =========================
 
+Advice: This connector is not working yet!!! Work in Progress...
+
 This module connects Odoo and TiendaNube.
 
 TiendaNube (https://www.tiendanube.com/) is a e-commerce available as Saas
@@ -97,38 +99,23 @@ To use this module, you need to:
 #. Check on each menu the resulting imported records (Customers, Sales
    Orders...)
 
-.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
-:alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/108/8.0
-
 Known issues / Roadmap
 ======================
 
-* Work with multiple warehouses.
-* Tests.
+* Work in progress...
+
 
 Bug Tracker
 ===========
 
-Bugs are tracked on `GitHub Issues
-<https://github.com/OCA/connector-tienda_nube/issues>`_. In case of trouble, please
-check there if your issue has already been reported. If you spotted it first,
-help us smashing it by providing a detailed and welcomed feedback.
+Bugs are tracked on `GitHub Issues <https://github.com/jobiols/connector-nube/issues>`_.
+In case of trouble, please check there if your issue has already been reported.
+If you spotted it first, help us smashing it by providing a detailed and welcomed feedback.
 
-Credits
-=======
-
-Images
-------
-
-* `TiendaNube logo <http://seeklogo.com/tienda_nube-logo-178788.html>`_.
-* `Odoo logo <https://www.odoo.com/es_ES/page/brand-assets>`_.
-* `Cable <https://openclipart.org/detail/174134/cable-with-connector>`_.
 
 Contributors
 ------------
 
-* Jorge Obiols <jorge.obiols@gmail.com>
 * Sébastien Beau <sebastien.beau@akretion.com>
 * Benoît Guillot <benoit.guillot@akretion.com>
 * Alexis de Lattre <alexis.delattre@akretion.com>
@@ -136,14 +123,11 @@ Contributors
 * Sergio Teruel <sergio.teruel@tecnativa.com>
 * Mikel Arregi <mikelarregi@avanzosc.es>
 * Pedro M. Baeza <pedro.baeza@tecnativa.com>
+* Jorge Obiols <jorge.obiols@gmail.com>
 
 Maintainer
 ----------
 
-.. image:: https://odoo-community.org/logo.png
-:alt: Odoo Community Association
-   :target: https://odoo-community.org
+This module is maintained by `jeo Software. <http://jeosoft.com.ar>`_
 
-This module is maintained by jeo Software.
-
-To contribute to this module, please visit https://github.com/jobiols/jeo
+To contribute to this module, please visit https://github.com/jobiols/connector-nube
